@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import React from 'react';
+const todos = [
+    { test: 'Cortar cebolla', completed: false },
+    { test: 'cebolla cort', completed: false },
+    { test: 'Ceb3', completed: false },
+    { test: 'Hola', completed: false },
+]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola heidy la aguada
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return ( <
+        React.Fragment >
+
+        {
+            /*
+                    <
+                   TodoCounter / >
+                   h2 > Has completado 2 de 3 TODOs < /h2>  <
+                   TodoSearch / >
+                   <
+                   input placeholder = "my_place" >
+                   <
+                   TodoList > {
+                       todos.map(to() => { <
+                           TodoItem / >
+                       })
+                   } <
+                   TodoList / >
+                   <
+                   CreateTodoButton / >
+                   <
+                   button > + < /button> 
+                   */
+        } <
+        React.Fragment >
+
+    );
 }
 
 export default App;
