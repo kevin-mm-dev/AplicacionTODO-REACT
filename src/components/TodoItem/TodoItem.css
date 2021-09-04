@@ -1,0 +1,43 @@
+
+
+.circle{
+    max-width: 1rem;
+    margin-right: 0.5rem;
+    filter: opacity(0.5);
+    cursor:pointer;
+}
+.cheque{
+    max-width: 1.5rem;
+    margin-right: 0.5rem;
+    cursor:pointer;
+}
+.dele{
+    max-width: 1.8rem;
+    margin-right: 0.5rem;
+    cursor:pointer;
+    /* position: absolute;
+    right: 34px;
+    margin-top: 10px; */
+}
+.divDele{
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: flex-end;
+}
+.divP{
+    width: -webkit-fill-available;
+    
+}
+
+.showOff{
+    display: none;
+
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+.hola{
+    color: red;
+}

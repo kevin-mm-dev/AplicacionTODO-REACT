@@ -1,0 +1,19 @@
+.TodoSearch{
+    display: flex;
+    justify-content: center;
+}
+.input_search{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: white;
+    border: 0;
+    box-shadow: 2px 15px 22px -7px rgb(0 0 0 / 83%);
+    -webkit-box-shadow: 3px 13px 16px -14px rgb(0 0 0 / 83%);
+    -moz-box-shadow: 2px 15px 22px -7px rgba(0,0,0,0.83);
+    font-family: 'Balsamiq Sans', cursive;
+    width: -webkit-fill-available;
+    max-width: 260px;
+}

@@ -1,0 +1,14 @@
+
+.div_add{
+    display: flex;
+    justify-content: center;
+}
+.btn_add{
+    background: transparent;
+    border: 0;
+    cursor:pointer;
+    padding:0px;
+}
+.btn_add_img{
+    width: 4rem;
+}

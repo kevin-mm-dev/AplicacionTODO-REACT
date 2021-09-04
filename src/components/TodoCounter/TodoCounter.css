@@ -1,0 +1,24 @@
+.title{
+    list-style: none;
+    font-size: 43px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    color: mintcream;
+    font-weight: 100;
+    margin-top: 0rem;
+    margin-bottom: 0;
+}
+.logo{
+    max-width: 3rem;
+}
+.TodoCounter{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.sub_title{
+    font-family: 'Balsamiq Sans', cursive;
+    color: #e4e4e4;
+    margin: 10px 0;
+}
