@@ -27,7 +27,6 @@ function TodoItem(props) {
         setTimeout(() => {
             props.onDelete();
         }, 300);
-        // alert("Se ha borrado el TODO "+props.text )
     };
     return (
         <li className={classField}>
