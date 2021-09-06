@@ -9,7 +9,7 @@ function TodoItem(props) {
     let classCircle = 'circle';
     let classCheque = 'cheque animate__animated animate__jello animate__fast';
     let classText="";
-    let classField="";
+    let classField="task";
     if (props.completed) {
         classCircle = 'showOff';
         classCheque = 'cheque animate__animated animate__jello animate__fast';
