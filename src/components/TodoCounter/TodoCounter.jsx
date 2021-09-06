@@ -22,7 +22,6 @@ function TodoCounter() {
             </p>
 
         </div>
-        // <img src={urlIcon}/>
     );
 }
 
