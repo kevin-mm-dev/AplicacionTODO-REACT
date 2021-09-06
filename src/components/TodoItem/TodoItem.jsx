@@ -26,7 +26,7 @@ function TodoItem(props) {
         props.setEliminatedTodo();
         setTimeout(() => {
             props.onDelete();
-        }, 1000);
+        }, 300);
         // alert("Se ha borrado el TODO "+props.text )
     };
     return (
