@@ -31,13 +31,8 @@
 
 .showOff{
     display: none;
-
 }
 
 .line-through{
     text-decoration: line-through;
-}
-
-.hola{
-    color: red;
 }

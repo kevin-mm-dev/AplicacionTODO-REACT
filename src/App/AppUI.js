@@ -8,32 +8,79 @@ import {TodoContext} from '../TodoContext';
 import {Modal} from '../components/Modal/ModalToCreate';
 import {TodoForm} from '../components/TodoFrom';
 import {BlockLoading} from '../components/Loading/BlockLoading';
+import { Menu } from "../components/Menu/Menu";
 
 
 function AppUI() {
     const {
         error,
         loading,
-        searchedTodos,
         completeTodo,
         deleteTodo,
         openModal,
         setOpenModal,
         setEliminatedTodo,
+        filterTodos,
+        filterActive,
+        filterCompleted,
+        stateFilter,
+        setStateFilter,
     }= React.useContext(TodoContext)
-
+    // const [stateFilter, setStateFilter] = React.useState("Active");
+    // setStateFilter("Active");
     return ( 
         <React.Fragment>
             <TodoCounter/>
+            <Menu setStateFilter={setStateFilter} stateFilter={stateFilter}/>
+
             <TodoSearch/>
                 <TodoList> 
                     {error && <p className='txt_instruction'>Ups! Hubo un error con la carga</p> }
                     {loading && <BlockLoading/> }
-                    {(!loading && !searchedTodos.length ) && <p className='txt_instruction'>Ready, start your taks list!!!</p> }
+                    {stateFilter === "Active"
+                        ? 
+                        (filterActive.length===0 && !loading?
+                            <p className='txt_instruction'>Ready, start your taks list!!!</p> :
+                                filterActive.map((item, i) => (
+                                    <TodoItem
+                                    key={i}
+                                    {...item}
+                                    setEliminatedTodo={() =>setEliminatedTodo(item.text)}
+                                    onComplete={() => completeTodo(item.text)}
+                                    onDelete={() => deleteTodo(item.text)}
+                                    />
+                            ))
+                        )
 
-                    {searchedTodos.map((item, index)=>(
-                        <TodoItem key={item.text}   text={item.text} completed={item.completed} eliminated={item.eliminated} onComplete={()=>completeTodo(item.text)} onDelete={()=>deleteTodo(item.text)}  setEliminatedTodo={()=>setEliminatedTodo(item.text)}/>
-                    ))}
+                        : stateFilter === "All"
+                        ? 
+                        (filterTodos.length===0 && !loading?
+                            <p className='txt_instruction'>Ready, start your taks list!!!</p> : 
+                        filterTodos.map((item, i) => (
+                            <TodoItem
+                                key={i}
+                                {...item}
+                                setEliminatedTodo={() =>setEliminatedTodo(item.text)}
+                                onComplete={() => completeTodo(item.text)}
+                                onDelete={() => deleteTodo(item.text)}
+                            />
+                            ))
+                        )
+
+                        : 
+                        (filterCompleted.length===0 && !loading?
+                            <p className='txt_instruction'>You haven't finished any task yet:(</p> : 
+                            filterCompleted.map((item, i) => (
+                            <TodoItem
+                                key={i}
+                                {...item}
+                                setEliminatedTodo={() =>setEliminatedTodo(item.text)}
+                                onComplete={() => completeTodo(item.text)}
+                                onDelete={() => deleteTodo(item.text)}
+                            />
+                        ))
+                        )
+                        }
                 </TodoList>
 
                 

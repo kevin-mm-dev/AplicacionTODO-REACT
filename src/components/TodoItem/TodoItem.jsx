@@ -11,10 +11,12 @@ function TodoItem(props) {
     let classText="";
     let classField="";
     if (props.completed) {
-        classCircle += ' showOff';
+        classCircle = 'showOff';
+        classCheque = 'cheque animate__animated animate__jello animate__fast';
         classText="line-through";
     }else{
-        classCheque += ' showOff';
+        classCheque = ' showOff';
+        classCircle = 'circle';
     }
 
     if (props.eliminated) {
@@ -31,7 +33,7 @@ function TodoItem(props) {
         <li className={classField}>
             {/* <img className={`circle ${props.completed && 'showOff'}` } src={circle}  /> */}
             <img alt="circle" onClick={props.onComplete}  className={classCircle } src={circle}  />
-            <img alt="cheque" className={classCheque} src={cheque} />
+            <img alt="cheque" onClick={props.onComplete}  className={classCheque} src={cheque} />
             <div className="divP">
             <p className={classText}>{props.text}</p>
 
