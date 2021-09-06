@@ -1,5 +1,4 @@
 import React from "react";
-import add from '../img/add.svg'; 
 import "./CreateTodoButton.css";
 
 

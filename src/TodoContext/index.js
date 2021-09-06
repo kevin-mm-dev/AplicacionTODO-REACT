@@ -1,14 +1,6 @@
 import React from 'react';
 import { useLocalStorage } from "./useLocalStorage";
 
-
-const defaultTodos = [
-  // { text: 'Tarea 1 test', completed: true },
-  // { text: 'Comer', completed: false },
-  // { text: 'Acabar polizas', completed: false },
-  // { text: 'Subir repo', completed: false },
-]
-
 const TodoContext =React.createContext();
 
 function TodoProvider(props) {
@@ -18,13 +10,12 @@ function TodoProvider(props) {
         saveItem:saveTodos,
         loading,
         error
-      }=useLocalStorage('TODOS_V1',defaultTodos);
+      }=useLocalStorage('TODOS_V1', []);
 
       
       const [searchValue,setSearchValue]=React.useState('');
       const [openModal,setOpenModal]=React.useState(false);
       
-      //  defaultTodos=todos.filter(to=> to.text==searchValue).length;
       const completedTodos=todos.filter(to=> !!to.completed).length;
       const totalTodos=todos.length;
       
