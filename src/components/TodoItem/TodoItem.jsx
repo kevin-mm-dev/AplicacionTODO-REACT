@@ -16,9 +16,17 @@ function TodoItem(props) {
     }else{
         classCheque += ' showOff';
     }
-    // const onDelete=()=>{
-    //     alert("Se ha borrado el TODO "+props.text )
-    // };
+
+    if (props.eliminated) {
+        classField+='  animate__animated animate__backOutDown animate__fast';
+    }
+    const onDel=()=>{
+        props.setEliminatedTodo();
+        setTimeout(() => {
+            props.onDelete();
+        }, 1000);
+        // alert("Se ha borrado el TODO "+props.text )
+    };
     return (
         <li className={classField}>
             {/* <img className={`circle ${props.completed && 'showOff'}` } src={circle}  /> */}
@@ -28,7 +36,7 @@ function TodoItem(props) {
             <p className={classText}>{props.text}</p>
 
             </div>
-            <div className="divDele"><img alt="delete" onClick={props.onDelete} className="dele" src={dele} /></div>
+            <div className="divDele"><img alt="delete" onClick={onDel} className="dele" src={dele} /></div>
         </li>
     );
 }

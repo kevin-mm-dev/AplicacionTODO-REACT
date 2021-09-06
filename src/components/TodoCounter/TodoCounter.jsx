@@ -1,10 +1,13 @@
 import React from "react";
-import "./TodoCounter.css";
 import logo from '../img/coronas.svg'; 
+import "./TodoCounter.css";
+import {TodoContext} from '../../TodoContext'; 
 
 
 
-function TodoCounter({total,completed}) {
+function TodoCounter() {
+  const {totalTodos,completedTodos} =React.useContext(TodoContext);
+
     return (
         <div className="TodoCounter">
             <img alt="logo" className="logo" src={logo} />
@@ -13,9 +16,9 @@ function TodoCounter({total,completed}) {
             </h1>
             <p className="sub_title"> 
            
-                Completado  <b>{completed}</b> /
+                Completed  <b>{completedTodos}</b> /
             
-              {total} TODOs
+              {totalTodos} TODOs
             </p>
 
         </div>

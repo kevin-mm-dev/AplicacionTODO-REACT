@@ -1,5 +1,7 @@
 # AplicacionTODO-REACT
-Aplicacion de tareas por hacer elaborada en react
+Task list (TODO`s) application developed in React , saves all the data in your browser but is also ready for the implementation of an api in case you want to add it.\
+Enjoy it!!
+
 
 
 # Getting Started with Create React App

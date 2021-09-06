@@ -1,0 +1,58 @@
+.form{
+    border: 7px solid #5c5cad;
+    padding: 1.3em 2em;
+    background: #a083e6;
+    border-radius: 23px;
+    display: flex;
+    flex-flow: column;
+}
+
+
+.text{
+    border-radius: 9px;
+    max-width: 16rem;
+    margin: 0px;
+    min-height: 4rem;
+    min-width: 11rem;
+    width: 387px;
+    /* height: 272px; */
+    max-height: 13rem;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.2em;
+}
+
+.div_btns{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+.btn {
+    width: 6rem;
+    height: 2.1rem;
+    border-radius: 7px;
+    font-family: 'Balsamiq Sans', cursive;
+    color: white;
+    -webkit-text-stroke: 0.8px black;
+    font-size: 26px;
+    cursor: pointer;
+}
+.btn_save{
+    background: #68f15f;
+    border: 3px solid #32772e;
+}
+.btn_cancel{
+    background: #ea4141;
+    border: 3px solid #5f2020;
+}
+.title_modal{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.7em;
+}
+.img_pin{    
+    width: 1.7em;
+    margin-left: 1em;
+}
+.header_modal{
+    align-self: center;
+
+}
