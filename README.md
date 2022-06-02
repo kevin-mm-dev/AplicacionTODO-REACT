@@ -1,4 +1,4 @@
-# Aplication TO-DO LIST - react.\
+# Aplication TO-DO LIST - react.
 A to-do list is where a series of tasks that are planned to be carried out are recorded.
 In this application tasks can be registered and managed in 2 states, they can be active or completed.
 To clean up the board, the app also allows you to delete tasks if you wish.
