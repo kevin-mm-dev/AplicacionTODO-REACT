@@ -1,10 +1,13 @@
-# AplicacionTODO-REACT
-Task list (TODO`s) application developed in React , saves all the data in your browser but is also ready for the implementation of an api in case you want to add it.\
+# Aplication TO-DO LIST - react.\
+A to-do list is where a series of tasks that are planned to be carried out are recorded.
+In this application tasks can be registered and managed in 2 states, they can be active or completed.
+To clean up the board, the app also allows you to delete tasks if you wish.
+Saves all the data in your browser but is also ready for the implementation of an api in case you want to add it.\
 Enjoy it!!
 
 You can try the app [here.](https://kevin-mm-dev.github.io/AplicacionTODO-REACT/)
 The app looks like this.\
-![image](https://user-images.githubusercontent.com/54743642/171500763-b4cf19eb-4ec9-4107-977a-9327b000304d.png)
+![image](https://user-images.githubusercontent.com/54743642/171527802-98d64c29-cfb0-4a41-82cc-bd75aec0cd87.png)
 
 
 ## Available Scripts
